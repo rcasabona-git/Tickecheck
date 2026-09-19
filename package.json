@@ -1,0 +1,14 @@
+{
+  "name": "agenda-recitales",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --test-scheduled",
+    "db:init": "wrangler d1 execute agenda-recitales --local --file=schema.sql",
+    "db:seed": "wrangler d1 execute agenda-recitales --local --file=seed.sql",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}
